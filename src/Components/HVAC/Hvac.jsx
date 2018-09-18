@@ -17,7 +17,7 @@ class Hvac extends Component {
                     </div>
                 {/*end breadcrumb */}
                 {/*content*/}
-                <div className="parallax">
+                <div className="hvac-parallax">
                 </div>
                     <div className="hvac-content">
                         <div className="container">

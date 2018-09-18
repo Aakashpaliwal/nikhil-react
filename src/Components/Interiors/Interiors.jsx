@@ -17,7 +17,7 @@ class Interiors extends Component {
                     </div>
                 {/*end breadcrumb */}
                 {/*content*/}
-                <div className="parallax">
+                <div className="interiors-parallax">
                 </div>
                     <div className="hvac-content">
                         <div className="container">

@@ -17,7 +17,7 @@ class Electrical extends Component {
                     </div>
                 {/*end breadcrumb */}
                 {/*content*/}
-                <div className="parallax">
+                <div className="electric-parallax">
                 </div>
                     <div className="hvac-content">
                         <div className="container">

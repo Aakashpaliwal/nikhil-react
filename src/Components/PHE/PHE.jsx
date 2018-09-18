@@ -17,7 +17,7 @@ class PHE extends Component {
                     </div>
                 {/*end breadcrumb */}
                 {/*content*/}
-                <div className="parallax">
+                <div className="phe-parallax">
                 </div>
                     <div className="hvac-content">
                         <div className="container">

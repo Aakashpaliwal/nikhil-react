@@ -17,7 +17,7 @@ class BMS extends Component {
                     </div>
                 {/*end breadcrumb */}
                 {/*content*/}
-                <div className="parallax">
+                <div className="bms-parallax">
                 </div>
                     <div className="hvac-content">
                         <div className="container">

@@ -16,7 +16,7 @@ class Firefighting extends Component {
                     </div>
                 {/*end breadcrumb */}
                 {/*content*/}
-                <div className="parallax">
+                <div className="fire-parallax">
                 </div>
                     <div className="hvac-content">
                         <div className="container">

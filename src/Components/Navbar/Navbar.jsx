@@ -11,13 +11,13 @@ export class Navbar extends Component {
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">☰</button> 
     <div className="collapse navbar-collapse custom-below-navbar" id="navbar-collapse">
         <ul className="nav navbar-nav ml-auto">
-            <li className="nav-item active"> <a className="nav-link" href="#home">Home</a>
-            </li>
-            <li className="nav-item"> <a className="nav-link" href="#about">About</a>
+            <Link to="/"><li className="nav-item active"> <a className="nav-link" href="">Home</a>
+            </li></Link>
+            <li className="nav-item"> <a className="nav-link" href="#service">About</a>
             </li>
             <li className="nav-item"> <a className="nav-link" href="#portfolio">Portfolio</a>
             </li>
-           <Link to ="/Projects"> <li className="nav-item"> <a className="nav-link" href="#portfolio">Projects</a>
+           <Link to ="/Projects"> <li className="nav-item"> <a className="nav-link" href="">Projects</a>
             </li></Link>
             {/* <li className="nav-item"> <a className="nav-link" href="#service">Services</a>
             </li> */}
@@ -27,7 +27,7 @@ export class Navbar extends Component {
                     <a class="dropdown-item custom-a-color" href="#"><Link to ="/HVAC">HVAC</Link></a>
                     <a class="dropdown-item" href="#"><Link to ="/Electrical">Electric</Link></a>
                     <a class="dropdown-item" href="#"><Link to ="/Firefighting">Firefighting</Link></a>
-                    <a class="dropdown-item" href="#"><Link to ="/Ineriors">Interiors</Link></a>
+                    <a class="dropdown-item" href="#"><Link to ="/Interiors">Interiors</Link></a>
                     <a class="dropdown-item" href="#"><Link to ="/BMS">BMS And Much More</Link></a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#"><Link to ="PHE">Public Health Engineering</Link></a>
@@ -35,7 +35,7 @@ export class Navbar extends Component {
             </li>
             {/* <li className="nav-item"> <a className="nav-link" href="#price">Prices</a>
             </li> */}
-            <li className="nav-item"> <a className="nav-link" href="#contact">Contact</a>
+            <li className="nav-item"> <a className="nav-link" href="#"><Link to ="/">Contact</Link></a>
             </li>
             {/* <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
