@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+// import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap';
 import 'react-popper';
@@ -22,7 +22,7 @@ class App extends Component {
     return (
       <div>
        <Navbar />
-       <Route path = "/" exact = {true} component = {Home} />
+       <Route path = "/" exact component = {Home} />
         <Route path = "/Hvac" exact = {true} component = {Hvac} />
         <Route path = "/Electrical" exact = {true} component = {Electrical} />
         <Route path = "/Firefighting" exact = {true} component = {Firefighting} />

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
+import {HashLink as Link} from 'react-router-hash-link';
 import './Navbar.css';
 
 export class Navbar extends Component {
@@ -13,12 +14,12 @@ export class Navbar extends Component {
         <ul className="nav navbar-nav ml-auto">
             <Link to="/"><li className="nav-item active"> <a className="nav-link" href="">Home</a>
             </li></Link>
-            <li className="nav-item"> <a className="nav-link" href="#service">About</a>
+            <li className="nav-item"> <a className="nav-link" href=""><Link to="/About">About</Link></a>
             </li>
-            <li className="nav-item"> <a className="nav-link" href="#portfolio">Portfolio</a>
+            <li className="nav-item nav-link"> <Link to="//#portfolio">Portfolio</Link>
             </li>
-           <Link to ="/Projects"> <li className="nav-item"> <a className="nav-link" href="">Projects</a>
-            </li></Link>
+           <li className="nav-item"> <a className="nav-link" href=""><Link to ="/Projects"> Projects</Link></a>
+            </li>
             {/* <li className="nav-item"> <a className="nav-link" href="#service">Services</a>
             </li> */}
             <li class="nav-item dropdown">
@@ -35,7 +36,11 @@ export class Navbar extends Component {
             </li>
             {/* <li className="nav-item"> <a className="nav-link" href="#price">Prices</a>
             </li> */}
-            <li className="nav-item"> <a className="nav-link" href="#"><Link to ="/">Contact</Link></a>
+            <li className="nav-item"> <a className="nav-link" href="#"><Link to ="/Career">Career</Link></a>
+            </li>
+            <li className="nav-item"> <a className="nav-link" href="#"><Link to ="/Blog">Blog</Link></a>
+            </li>
+            <li className="nav-item nav-link"> <Link to ="/Home#contact">Contact</Link>
             </li>
             {/* <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
