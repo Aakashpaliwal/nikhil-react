@@ -1,0 +1,21 @@
+.blog-header-bg {
+    background: url(../img/bg-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20%;
+}
+.custom-blog-card {
+    margin: 20px 0;
+    box-shadow: 5px 10px 10px 0px rgba(216, 216, 216, 0.78);
+}
+.custom-blog-card .card-body p, .fa-user-circle{
+    color: #999;
+}
+.custom-blog-card .blog-hover-para:hover  .fa-arrow-circle-right{
+    transition: all ease 0.5s;
+    transform: translateX(5px);
+}
+.custom-blog-card .blog-hover-para .fa-arrow-circle-right {
+    transition: all ease 0.5s;
+   
+}

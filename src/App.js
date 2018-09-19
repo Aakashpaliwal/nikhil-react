@@ -14,6 +14,9 @@ import Interiors from './Components/Interiors/Interiors';
 import BMS from './Components/BMS/BMS';
 import PHE from './Components/PHE/PHE';
 import Projects from './Components/Projects/Projects';
+import About from './Components/About/About';
+import Career from './Components/Career/Career';
+import Blog from './Components/Blog/Blog';
 class App extends Component {
   render() {
     return (
@@ -27,6 +30,9 @@ class App extends Component {
         <Route path = "/BMS" exact = {true} component = {BMS} />
         <Route path = "/PHE" exact = {true} component = {PHE} />
         <Route path = "/Projects" exact = {true} component = {Projects} />
+        <Route path = "/About" exact = {true} component = {About} />
+        <Route path = "/Career" exact = {true} component = {Career} />
+        <Route path = "/Blog" exact = {true} component = {Blog} />
       <Footer />
       </div>
     );
