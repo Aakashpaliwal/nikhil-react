@@ -1,30 +1,68 @@
 import React, { Component } from 'react'
 import './Home.css';
 export class Home extends Component {
-  state = {
-    user_name: "",
-     email : "",
-     subject : "",
-     message : ""
- 
-   };
-   change  = e => {
-     this.setState ({
-       [e.target.name]: e.target.value
-     });
-   };
-   onSubmit = e =>
-   {
-       e.preventDefault();
-       console.log(this.state);
-       this.setState ({
-        user_name: "",
-        email : "",
-        subject : "",
-        message : ""
-     
-       })
-   };
+  constructor(props)
+  {
+    super(props);
+    this.state = {
+    first_name : "",
+    last_name : "",
+    email : "",
+    subject : "",
+    contact_number : ""
+  
+    };
+  }
+   
+      change  = e => {
+        this.setState ({
+          [e.target.name]: e.target.value
+        });
+      };
+      getWebsite = () => {
+        fetch("/")
+    };
+      onSubmit = e =>
+      {
+          e.preventDefault();
+          console.log(this.state);
+        //   if (
+        //     this.state.category === "" ||
+        //     this.state.subcategory === "" ||
+        //     this.state.company === "" ||
+        //     this.state.model === "" ||
+        //     this.state.manufacturing_year === ""
+           
+        //  ) {
+        //     alert("Unable to contact because fields were left blank");
+        //     }else {
+        //         fetch(`/contact`,{
+        //             method : "POST",
+        //             headers : {
+        //                 "Content-Type": "application/json; charset=utf-8"
+        //             },
+        //             body: JSON.stringify(this.state)
+        //         }
+        //         ).then(this.getWebsite);
+        //       }
+          this.setState ({
+            first_name : "",
+            last_name : "",
+            email : "",
+            subject : "",
+            contact_number : ""
+
+          })
+          //replace /contact with server url
+          fetch('/partner', {
+            method : "POST",
+            headers : {
+              "Content-Type" : "application/json; chardet=utf-8"
+            },
+            body : JSON.stringify(this.state)
+          }).then(this.getWebsite);
+
+      };
   render() {
     return (
       <div>
@@ -425,26 +463,26 @@ export class Home extends Component {
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputEmail4">First Name</label>
-      <input type="text" class="form-control" id="inputEmail4" />
+      <input type="text" class="form-control" id="inputEmail4" name="first_name" value={this.state.first_name} onChange={e => this.change(e)}/>
     </div>
     <div class="form-group col-md-6">
       <label for="inputPassword4">Last Name</label>
-      <input type="text" class="form-control" id="inputPassword4"/>
+      <input type="text" class="form-control" id="inputPassword4" name="last_name" value={this.state.last_name} onChange={e => this.change(e)}/>
     </div>
     <div class="form-group col-md-6">
       <label for="inputPassword4">Email</label>
-      <input type="email" class="form-control" id="inputPassword4"/>
+      <input type="email" class="form-control" id="inputPassword4" name="email" value={this.state.email} onChange={e => this.change(e)}/>
     </div>
     <div class="form-group col-md-6">
       <label for="inputPassword4">Contact Number</label>
-      <input type="number" class="form-control" id="inputPassword4"/>
+      <input type="number" class="form-control" id="inputPassword4" name="contact_number" value={this.state.contact_number} onChange={e => this.change(e)}/>
     </div>
     <div class="form-group col-md-12">
       <label for="inputPassword4">Subject</label>
-      <textarea className="form-control"></textarea>
+      <textarea className="form-control" name="subject" value={this.state.subject} onChange={e => this.change(e)}></textarea>
     </div>
   </div>
-  <button type="submit" class="btn btn-light text-center center-block">Send</button>
+  <button class="btn btn-light text-center center-block" onClick = {e => this.onSubmit(e)}>Send</button>
 </form>
 
              </div>

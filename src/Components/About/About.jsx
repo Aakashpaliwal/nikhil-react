@@ -7,12 +7,19 @@ class About extends Component {
         return (
             <React.Fragment>
             <div>
-            <div id="scroll-animate">
+            {/* <div id="scroll-animate">
   <div id="scroll-animate-main">
     <div className="wrapper-parallax">
       <header>
         <h1>About Us</h1>
-      </header>
+      </header> */}
+      <div id="header">
+            <div id="header__background">
+                <div id="header__centered">
+                    <h1>About Us</h1>
+                </div>
+            </div>
+        </div>
 
       <section className="content">
         {/* <h1>Content</h1> */}
@@ -56,9 +63,9 @@ class About extends Component {
       {/* <footer>
         <h1>Footer</h1>
       </footer> */}
-    </div>
+    {/* </div>
   </div>
-</div>
+</div> */}
                 
             </div>
             </React.Fragment>

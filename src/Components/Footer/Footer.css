@@ -83,3 +83,22 @@
     margin: 15px 0;
     
 }
+.custom-footer-btn {
+    margin: 20px 0;
+    border-radius: 0;
+}
+.custom-footer-btn:focus{
+    box-shadow: none;
+}
+.footer-email {
+    border-radius: 0;
+    background: none;
+    border: none;
+    border-bottom: solid thin #fff;
+}
+.footer-email:focus {
+    background: none;
+    box-shadow: none;
+    border-bottom: solid thin #0077e8;
+    transition: all ease 0.5s;
+}

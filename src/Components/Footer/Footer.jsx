@@ -2,6 +2,60 @@ import React, { Component } from 'react'
 import './Footer.css'
 
 export class Footer extends Component {
+  constructor(props)
+  {
+    super(props);
+    this.state = {
+   email: ""
+  
+    };
+  }
+   
+      change  = e => {
+        this.setState ({
+          [e.target.name]: e.target.value
+        });
+      };
+      getWebsite = () => {
+        fetch("/")
+    };
+      onSubmit = e =>
+      {
+          e.preventDefault();
+          console.log(this.state);
+        //   if (
+        //     this.state.category === "" ||
+        //     this.state.subcategory === "" ||
+        //     this.state.company === "" ||
+        //     this.state.model === "" ||
+        //     this.state.manufacturing_year === ""
+           
+        //  ) {
+        //     alert("Unable to contact because fields were left blank");
+        //     }else {
+        //         fetch(`/contact`,{
+        //             method : "POST",
+        //             headers : {
+        //                 "Content-Type": "application/json; charset=utf-8"
+        //             },
+        //             body: JSON.stringify(this.state)
+        //         }
+        //         ).then(this.getWebsite);
+        //       }
+          this.setState ({
+            email : ""
+
+          })
+          //replace /contact with server url
+          fetch('/subscribe', {
+            method : "POST",
+            headers : {
+              "Content-Type" : "application/json; chardet=utf-8"
+            },
+            body : JSON.stringify(this.state)
+          }).then(this.getWebsite);
+
+      };
   render() {
     return (
       <div>
@@ -36,7 +90,10 @@ export class Footer extends Component {
                          </ul>
                     </div>
                      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                    <button type="submit" class="btn btn-primary btn-contact-footer">CONTACT US</button>
+                    {/* <button type="submit" class="btn btn-primary btn-contact-footer">CONTACT US</button> */}
+                   <h5>Signup To Our Newsletter </h5>
+                    <input type="email" className="form-control footer-email" name="email" value = {this.state.email} onChange = {e => this.change(e)}/>
+                    <button className="btn btn-primary custom-footer-btn form-control" onClick = {e => this.onSubmit(e)}>SEND</button>
                     </div>
                 </div>
                 </div>

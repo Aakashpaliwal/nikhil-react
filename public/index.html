@@ -38,6 +38,40 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   <script src="assets/js/jquery.min.js"></script>
+  <!-- <script src="assets/js/slick.js"></script>
+  <script>
+  $(document).ready(function(){
+    $('.customer-logos').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+});
+  </script> -->
+  <script>
+  $(document).ready(function(){
+    var moving__background = $("#header__background");
+    $(window).scroll(function() { 
+        moving__background.css('margin-top', ($(window).scrollTop())/3); // Parallax scrolling
+        moving__background.css('opacity', 1 - ($(window).scrollTop())/moving__background.height()); // Fading out
+    });
+});
+  </script>
   <script>
       
     function scrollFooter(scrollY, heightFooter)
@@ -99,31 +133,7 @@ $(window).load(function(){
     
     </script>
    
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-  <script>
-  $(document).ready(function(){
-    $('.customer-logos').slick({
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 1500,
-        arrows: false,
-        dots: false,
-        pauseOnHover: false,
-        responsive: [{
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 4
-            }
-        }, {
-            breakpoint: 520,
-            settings: {
-                slidesToShow: 3
-            }
-        }]
-    });
-});
-  </script>
+
   <script>
     $(document).ready(function(){
       // Add smooth scrolling to all links
