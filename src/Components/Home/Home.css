@@ -390,6 +390,14 @@
     color: #868F9B;
     font-size: 14px;
 }
+.custom-offer-box .bms-para {
+   /* white-space: nowrap; */
+    width: 350px; 
+    height: 62px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+
+}
 .custom-featured-row {
     margin-top: 20px;
 }
