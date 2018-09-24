@@ -430,7 +430,7 @@ export class Home extends Component {
       <h2 className="text-center">Our Clients</h2>
             <p>It is a long established fact that a reader will be distracted by the</p>
             <hr className="below-header-hr-contact"></hr>
-      <div class="customer-logos slider">
+      {/* <div class="customer-logos slider">
         
       <div class="slide"><img src={require('../img/logos/image1.png')} className="img-fluid"/></div>
       <div class="slide"><img src={require('../img/logos/image2.png')} className="img-fluid"/></div>
@@ -440,7 +440,97 @@ export class Home extends Component {
       <div class="slide"><img src={require('../img/logos/image6.png')} className="img-fluid"/></div>
       <div class="slide"><img src={require('../img/logos/image7.png')} className="img-fluid"/></div>
       <div class="slide"><img src={require('../img/logos/image8.png')} className="img-fluid"/></div>
-   </div>
+   </div> */}
+   <div id="blogCarousel" class="carousel slide" data-ride="carousel">
+                       
+                        <div class="carousel-inner">
+
+                            <div class="carousel-item active">
+                                <div class="row">                               
+                                    <div class="col-md-2 eckcon">
+                                       
+                                            <img className="img-fluid" src={require('../img/logos/image1.png')} alt="Image"/>
+                                           
+                                       
+                                    </div>
+                                    <div class="col-md-2 eckcon">
+                                       
+                                            <img className="img-fluid" src={require("../img/logos/image2.png")} alt="Image" />
+                                          
+                                       
+                                    </div>
+                                    <div class="col-md-2 eckcon">
+                                      
+                                            <img className="img-fluid" src={require("../img/logos/image3.png")} alt="Image"  />
+                                          
+                                       
+                                    </div>
+                                    <div class="col-md-2 eckcon">
+                                       
+                                            <img className="img-fluid" src={require("../img/logos/image4.png")} alt="Image"  />
+                                           
+                                       
+                                    </div>
+                                    <div class="col-md-2 eckcon">
+                                       
+                                       <img className="img-fluid" src={require("../img/logos/image2.png")} alt="Image" />
+                                     
+                                  
+                               </div>
+                               <div class="col-md-2 eckcon">
+                                      
+                                      <img className="img-fluid" src={require("../img/logos/image3.png")} alt="Image"  />
+                                    
+                                 
+                              </div>
+                                    
+                                </div>
+                               
+                            </div>
+                           
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-md-2 eckcon">
+                                       
+                                            <img className="img-fluid" src={require("../img/logos/image5.png")} alt="Image"  />
+                                           
+                                    </div>
+                                    <div class="col-md-2 eckcon">
+                                    
+                                            <img className="img-fluid" src={require("../img/logos/image6.png")} alt="Image" />
+                                           
+                                       
+                                    </div>
+                                    <div class="col-md-2 eckcon">
+                                      
+                                            <img className="img-fluid" src={require("../img/logos/image7.png")} alt="Image"/>
+                                           
+                                    </div>
+                                    <div class="col-md-2 eckcon">
+                                       
+                                            <img className="img-fluid" src={require("../img/logos/image8.png")} alt="Image"/>
+                                           
+                                       
+                                    </div>
+                                    <div class="col-md-2 eckcon">
+                                       
+                                       <img className="img-fluid" src={require("../img/logos/image5.png")} alt="Image"  />
+                                      
+                               </div>
+                               <div class="col-md-2 eckcon">
+                                    
+                                    <img className="img-fluid" src={require("../img/logos/image6.png")} alt="Image" />
+                                   
+                               
+                            </div>
+                                </div>
+                               
+                            </div>
+                         
+
+                        </div>
+                       
+                    </div>
    </div>
    </div>
    </div>
